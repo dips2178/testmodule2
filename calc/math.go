@@ -1,12 +1,14 @@
 package calc
+import "fmt"
 
 // returns sum and product of two integers
-func AddAndMul(numbers ...int) (sum int,prod int) {
+func Add(numbers ...int) (sum int) {
 	sum = 0
-	prod = 1
+	prod := 1
 	for _, num := range numbers {
 		sum = sum + num
 		prod = prod * num
 	}
-	return sum, prod
+	fmt.Println("Prod=",prod)
+	return sum
 }
